@@ -1,6 +1,6 @@
-# EMBO 2025 "Hands-on course in genome sequencing, assembly, and downstream analyses"
+# EMBO 2025 "Genome sequencing, assembly, curation, and downstream analyses"
 
-This is a tutorial on genome assembly prepared for an [EMBO course](https://meetings.embo.org/event/24-genome-sequencing), taking place in Florence (Italy) from September 7th to 13th. The tutorial addresses all steps in a genome assembly pipeline of a eukaryote using high-accuracy PacBio HiFi, Nanopore R10.4 long reads and Hi-C. These steps include analyzing long reads prior to assembly, generating the first draft assembly, evaluating the quality of the assembly, purging haplotigs to generate collapsed assemblies, polishing to improve accuracy, removing contigs from contaminants, and Hi-C scaffolding to obtain chromosome-level scaffolds. 
+This is a tutorial on genome assembly prepared for an [EMBO course]([https://meetings.embo.org/event/25-genome-seq), taking place in Florence (Italy) from September 7th to 13th. The tutorial addresses all steps in a genome assembly pipeline of a eukaryote using high-accuracy PacBio HiFi, Nanopore R10.4 long reads and Hi-C. These steps include analyzing long reads prior to assembly, generating the first draft assembly, evaluating the quality of the assembly, purging haplotigs to generate collapsed assemblies, polishing to improve accuracy, removing contigs from contaminants, and Hi-C scaffolding to obtain chromosome-level scaffolds. 
 
 ## [S1: Analysis of DNA sequencing](https://github.com/nadegeguiglielmoni/EMBO-25-genome-sequencing/blob/main/S1_analysis_dna_sequencing.md)
 ## [S2: *De novo* assembly](https://github.com/nadegeguiglielmoni/EMBO-25-genome-sequencing/blob/main/S2_de_novo_assembly.md)
