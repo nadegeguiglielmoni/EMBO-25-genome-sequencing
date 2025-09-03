@@ -1,12 +1,10 @@
 # Analysis of DNA sequencing
 
+In this first step, we will analyze the quality and length of PacBio HiFi and Nanopore R10.4 sequencing data prior to assembly. PacBio HiFi and Nanopore R10.4 reads are both high-accuracy datasets. We will extract the *k*-mers from these reads to estimate features of the genome (size, heterozygosity, repetitive content, ploidy).
+
 Goals:
 * assess the quality and length of long-read datasets
 * estimate genome characteristics using *k*-mer approaches
-
-The tool NanoPlot gives a representation of the quality and length of long-read datasets. As we have both PacBio HiFi and Nanopore reads, we can observe the main differences between: PacBio HiFi reads have the highest quality, while Nanopore reads can reach a length of 100+ kb. 
-
-GenomeScope gives an estimation of genome size, heterozygosity, unique content, and Smudgeplot estimates the ploidy.
 
 ## NanoPlot on PacBio HiFi reads
 
