@@ -1,4 +1,4 @@
-# EMBO-24-genome-sequencing
+# EMBO 2025 "Hands-on course in genome sequencing, assembly, and downstream analyses"
 
 ## [S1: Analysis of DNA sequencing](https://github.com/nadegeguiglielmoni/EMBO-24-genome-sequencing/blob/main/S1_analysis_dna_sequencing.md)
 ## [S2: *De novo* assembly](https://github.com/nadegeguiglielmoni/EMBO-24-genome-sequencing/blob/main/S2_de_novo_assembly.md)
