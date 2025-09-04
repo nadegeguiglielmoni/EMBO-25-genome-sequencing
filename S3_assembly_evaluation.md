@@ -12,6 +12,12 @@ gfastats assembly.fasta --nstar-report --locale en_US.UTF-8  --tabular
 
 ## Ortholog completeness
 
+To learn more [about BUSCO](https://www.youtube.com/watch?v=Q0T4DLGFSNQ&t=3s)
+
+```
+Manni, M., Berkeley, M. R., Seppey, M., Simão, F. A., & Zdobnov, E. M. (2021). BUSCO update: novel and streamlined workflows along with broader and deeper phylogenetic coverage for scoring of eukaryotic, prokaryotic, and viral genomes. Molecular biology and evolution, 38(10), 4647-4654.
+```
+
 [BUSCO](https://busco.ezlab.org/)
 
 ![busco](s3_pic/busco.png)
@@ -21,6 +27,11 @@ busco --in assembly.fasta --mode genome --out busco_out --evalue 0.001 --limit 3
 ```
 
 ## *k*-mer completeness
+
+To learn more [about Merqury](https://www.youtube.com/watch?v=F2wsXEnMP0U)
+```
+Rhie, A., Walenz, B. P., Koren, S., & Phillippy, A. M. (2020). Merqury: reference-free quality, completeness, and phasing assessment for genome assemblies. Genome biology, 21(1), 245.
+```
 
 [Meryl](https://github.com/marbl/meryl)
 [Merqury](https://github.com/marbl/merqury)
