@@ -2,6 +2,8 @@
 
 This is a tutorial on genome assembly prepared for an [EMBO course]([https://meetings.embo.org/event/25-genome-seq), taking place in Florence (Italy) from September 7th to 13th. The tutorial addresses all steps in a genome assembly pipeline of a eukaryote using high-accuracy PacBio HiFi, Nanopore R10.4 long reads and Hi-C. These steps include analyzing long reads prior to assembly, generating the first draft assembly, evaluating the quality of the assembly, purging haplotigs to generate collapsed assemblies, polishing to improve accuracy, removing contigs from contaminants, and Hi-C scaffolding to obtain chromosome-level scaffolds. 
 
+Datasets for this tutorial are available in [Galaxy](https://usegalaxy.eu/u/nguiglie/h/embo2025-assembly). They are a subset of datasets published in European Nucleotide Archive project [PRJEB87118](https://www.ebi.ac.uk/ena/browser/view/PRJEB87118).
+
 ## [S1: Analysis of DNA sequencing](https://github.com/nadegeguiglielmoni/EMBO-25-genome-sequencing/blob/main/S1_analysis_dna_sequencing.md)
 ## [S2: *De novo* assembly](https://github.com/nadegeguiglielmoni/EMBO-25-genome-sequencing/blob/main/S2_de_novo_assembly.md)
 ## S3: Assembly evaluation, polishing and haplotype purging of the assemblies
