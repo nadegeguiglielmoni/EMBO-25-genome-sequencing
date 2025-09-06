@@ -6,6 +6,10 @@
 
 [minimap2](https://github.com/lh3/minimap2)
 
+```
+Li, H. (2018). Minimap2: pairwise alignment for nucleotide sequences. Bioinformatics, 34(18), 3094-3100.
+```
+
 ![minimap2_hifi](s3_pic/minimap2_hifi.png)
 ![minimap2_out](s3_pic/minimap2_output.png)
 
@@ -27,6 +31,10 @@ minimap2 -x map-ont --q-occ-frac 0.01 assembly.fasta hifi.fastq.gz > minimap2_on
 ## Splitting and self-mapping the assembly
 
 [purge_dups](https://github.com/dfguan/purge_dups)
+
+```
+Guan, D., McCarthy, S. A., Wood, J., Howe, K., Wang, Y., & Durbin, R. (2020). Identifying and removing haplotypic duplication in primary genome assemblies. Bioinformatics, 36(9), 2896-2898.
+```
 
 ![purge_dups_split](s3_pic/purge_dups_split.png)
 
