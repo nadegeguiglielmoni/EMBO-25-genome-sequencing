@@ -6,7 +6,13 @@ Goals:
 
 ## hifiasm (PacBio HiFi only)
 
+To learn more [about hifiasm](https://www.youtube.com/watch?v=RtTRC3AaaPk&t=1927s).
+
 [hifiasm](https://github.com/chhylp123/hifiasm)
+
+```
+Cheng, H., Concepcion, G. T., Feng, X., Zhang, H., & Li, H. (2021). Haplotype-resolved de novo assembly using phased assembly graphs with hifiasm. Nature Methods, 18(2), 170-175.
+```
 
 ![hifiasm_hifi](s2_pic/hifiasm_hifi.png)
 
@@ -17,6 +23,10 @@ hifiasm -o output -f 37 -l 3 --primary ju765.hifi_reads.3Gb.fastq.gz
 ## Flye (HiFi)
 
 [Flye](https://github.com/fenderglass/Flye)
+
+```
+Kolmogorov, M., Yuan, J., Lin, Y., & Pevzner, P. A. (2019). Assembly of long, error-prone reads using repeat graphs. Nature Biotechnology, 37(5), 540-546.
+```
 
 ![flye_hifi](s2_pic/flye_hifi.png)
 
@@ -55,7 +65,13 @@ awk '/^S/{print ">"$2;print $3}' assembly.gfa > assembly.fasta
 
 ## Checking the graphical fragment assembly (GFA)
 
+To learn more [about Bandage](https://www.youtube.com/watch?v=cierloa5hS0).
+
 [Bandage](https://rrwick.github.io/Bandage/)
+
+```
+Wick, R. R., Schultz, M. B., Zobel, J., & Holt, K. E. (2015). Bandage: interactive visualization of de novo genome assemblies. Bioinformatics, 31(20), 3350-3352.
+```
 
 ### Bandage info
 
