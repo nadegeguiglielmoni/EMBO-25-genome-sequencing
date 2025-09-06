@@ -8,6 +8,11 @@ Goals:
 
 [bwa mem2](https://github.com/bwa-mem2/bwa-mem2)
 
+```
+Li, H., & Durbin, R. (2009). Fast and accurate short read alignment with Burrows–Wheeler transform. bioinformatics, 25(14), 1754-1760.
+Li, H. (2013). Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. arXiv preprint arXiv:1303.3997.
+```
+
 ![bwa mem](s4_pic/bwa_mem_contigs.png)
 
 Note that we are treating the paired reads as separate, unpaired files. We need to get a name-sorted BAM (instead of the usual coordinate-sorted ones), because we will need to find pairs later on, and due to the nature of Hi-C sequencing, these pairs should have their R1 and R2 reads at distant coordinates from each other. 
@@ -55,9 +60,13 @@ The result will look like this:
 
 [YaHS](https://github.com/c-zhou/yahs)
 
+```
+Zhou, C., McCarthy, S. A., & Durbin, R. (2023). YaHS: yet another Hi-C scaffolding tool. Bioinformatics, 39(1), btac808.
+```
+
 ![yahs](s4_pic/yahs.png)
 
-```sh
+```shAligning
 yahs assembly.fasta merged_sorted.bam -e 'GATC,GANTC,CTNAG,TTAA' -o yahs_out
 # this following step just symlinks the scaffolds with a different name
 ln -s yahs_out_scaffolds_final.fa scaffolds.fasta
