@@ -109,8 +109,29 @@ Wick, R. R., Schultz, M. B., Zobel, J., & Holt, K. E. (2015). Bandage: interacti
 ```sh
 Bandage info input.gfa 
 ```
+```
+Node count: 	34
+Edge count: 	20
+Smallest edge overlap (bp): 	0
+Largest edge overlap (bp): 	0
+Total length (bp): 	35797610
+Total length no overlaps (bp): 	35797610
+Dead ends: 	38
+Percentage dead ends: 	55.8824%
+Connected components: 	17
+Largest component (bp): 	10696046
+Total length orphaned nodes (bp): 	16754063
+N50 (bp): 	2231814
+Shortest node (bp): 	699
+Lower quartile node (bp): 	44143
+Median node (bp): 	679885
+Upper quartile node (bp): 	1429673
+Longest node (bp): 	5107803
+Median depth: 	0
+Estimated sequence length (bp): 	0
+```
 
-![bandage_info_result](s2_pic/bandage_info_result.png)
+The nodes are the nucleotide sequences and the edges are the connections between the sequences based on overlaps. The assembly size is 35,797,610, matching the expected size based on twice the estimated GenomeScope size (with the two haplotypes). 
 
 ### Bandage image
 
@@ -120,27 +141,4 @@ Bandage info input.gfa
 Bandage image input.gfa 
 ```
 
-![bandage_image_result](s2_pic/bandage_image_result.jpg)
-
-## Bandage image results for the different assemblies
-Flye: ONT raw (not decontaminated)
-![graph_flye_ont_raw](s2_pic/graph_flye_ont_raw.png)
-Flye: HiFi raw (not decontaminated)
-![graph_flye_hifi_raw](s2_pic/graph_flye_hifi_raw.png)
-Flye: ONT decontaminated
-![graph_flye_ont_decontam](s2_pic/graph_flye_ont_decontam.png)
-Flye: HiFi decontaminated
-![graph_flye_hifi_decontam](s2_pic/graph_flye_hifi_decontam.png)
-Hifiasm: HiFi decontaminated
-![graph_hifiasm_hifi_decontam](s2_pic/graph_hifiasm_hifi_decontam.png)
-Hifiasm: HiFi decontaminated + ONT decontaminated
-![graph_hifiasm_hifi_decontam_ont_decontam](s2_pic/graph_hifiasm_hifi_decontam_ont_decontam.png)
-
-## Assembly comparison
-
-| Reads           | Assembler | Size       | N50     | # contigs |
-| --------------- | --------- | ---------- | ------- | --------- |
-| HiFi            | hifiasm   | 60,019,763 | 389,632 | 326       |
-| HiFi            | Flye      | 83,597,840 | 308,436 | 487       |
-| Nanopore        | Flye      | 75,126,661 | 390,041 | 678       |
-| HiFi + Nanopore | hifiasm   | 59,651,792 | 480,804 | 225       |
+![bandage_image_result](s2_pic/galaxy.bandage_image.jpg)
