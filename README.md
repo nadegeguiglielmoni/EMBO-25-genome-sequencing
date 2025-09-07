@@ -4,7 +4,7 @@ This is a tutorial on genome assembly prepared for an [EMBO course]([https://mee
 
 ![pipeline](pipeline.png)
 
-Datasets for this tutorial are available in [Galaxy](https://usegalaxy.eu/u/nguiglie/h/embo2025-assembly). They are a subset of datasets published in European Nucleotide Archive for the nematodes *Plectus sambesii* project [PRJEB74285](https://www.ebi.ac.uk/ena/browser/view/PRJEB74285) and *Propanagrolaimus* sp. JU765 project [PRJEB87118](https://www.ebi.ac.uk/ena/browser/view/PRJEB87118). 
+Datasets for this tutorial are available in [Galaxy](https://usegalaxy.eu/u/nguiglie/h/embo2025-assembly-data). They are a subset of datasets published in European Nucleotide Archive for the nematodes *Plectus sambesii* project [PRJEB74285](https://www.ebi.ac.uk/ena/browser/view/PRJEB74285) and *Propanagrolaimus* sp. JU765 project [PRJEB87118](https://www.ebi.ac.uk/ena/browser/view/PRJEB87118). 
 
 ## [S1: Analysis of DNA sequencing](https://github.com/nadegeguiglielmoni/EMBO-25-genome-sequencing/blob/main/S1_analysis_dna_sequencing.md)
 ## [S2: *De novo* assembly](https://github.com/nadegeguiglielmoni/EMBO-25-genome-sequencing/blob/main/S2_de_novo_assembly.md)
