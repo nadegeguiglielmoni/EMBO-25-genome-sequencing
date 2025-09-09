@@ -1,5 +1,7 @@
 # Haplotig purging
 
+For this part, we will use a draft assembly and reads for the nematode *Propanagrolaimus* sp. JU765 [PRJEB87118](https://www.ebi.ac.uk/ena/browser/view/PRJEB87118). These reads were generated from multiple indivduals, and the species is hermaphroditic.
+
 ## Mapping reads to the assembly
 
 ### PacBio HiFi reads
