@@ -67,6 +67,12 @@ PacBio HiFi reads have the advantage in terms of accuracy, and Nanopore R10.4 re
 [jellyfish](https://github.com/gmarcais/Jellyfish)
 [GenomeScope2](https://github.com/tbenavi1/genomescope2.0)
 
+To learn more [about GenomeScope](https://www.youtube.com/watch?v=s808LzwI-u4).
+
+```
+Ranallo-Benavidez, T. R., Jaron, K. S., & Schatz, M. C. (2020). GenomeScope 2.0 and Smudgeplot for reference-free profiling of polyploid genomes. Nature Communications, 11(1), 1432.
+```
+
 Sequencing reads are provided as input to `jellyfish count` to build a database of *k*-mers, with *k* set to 21 in this case. Multiple odd values can be tested for *k*, such as 23, 25, 27, 29, 31... Lower values are prefered for low-coverage datasets. A histogram is built from the *k*-mer database using `jellyfish hist`. GenomeScope2 is then run to visualize the histogram and compute estimations of genome size, heterozygosity, repeat content. 
 
 ![jellyfish_count](s1_pic/galaxy.jellyfish_count_hifi.png) 
@@ -109,6 +115,8 @@ There are again two peaks, well separated as this library was not amplified. The
 ## Smudgeplot on Nanopore R10.4 reads
 
 [Smudgeplot](https://github.com/KamilSJaron/smudgeplot)
+
+To learn more [about Smudgeplot](https://www.youtube.com/watch?v=3erlEY8HKDs).
 
 ```
 Ranallo-Benavidez, T. R., Jaron, K. S., & Schatz, M. C. (2020). GenomeScope 2.0 and Smudgeplot for reference-free profiling of polyploid genomes. Nature Communications, 11(1), 1432.
