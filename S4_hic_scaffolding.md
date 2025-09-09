@@ -13,6 +13,8 @@ Li, H., & Durbin, R. (2009). Fast and accurate short read alignment with Burrows
 Li, H. (2013). Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. arXiv preprint arXiv:1303.3997.
 ```
 
+Usually, short-read mapping tools expect that paired end reads would have a "reasonable" insert size (some hundreds or thousands of bases). This is not the case for Hi-C reads, as paired end reads represent two regions that are close in 3D, but distant in the linear sequence. This is why both ends need to be mapped separately.
+
 ![bwa mem](s4_pic/bwa_mem_contigs.png)
 
 Note that we are treating the paired reads as separate, unpaired files. We need to get a name-sorted BAM (instead of the usual coordinate-sorted ones), because we will need to find pairs later on, and due to the nature of Hi-C sequencing, these pairs should have their R1 and R2 reads at distant coordinates from each other. 
