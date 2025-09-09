@@ -17,8 +17,7 @@ Usually, short-read mapping tools expect that paired end reads would have a "rea
 
 ![bwa mem](s4_pic/bwa_mem_contigs.png)
 
-Note that we are treating the paired reads as separate, unpaired files. We need to get a name-sorted BAM (instead of the usual coordinate-sorted ones), because we will need to find pairs later on, and due to the nature of Hi-C sequencing, these pairs should have their R1 and R2 reads at distant coordinates from each other. 
-
+We need to get a name-sorted BAM (instead of the usual coordinate-sorted ones), because we will need to find pairs later on.
 ```sh
 bwa-mem2 index assembly.fasta
 bwa-mem2 mem assembly.fasta R1_subseq_10pct.fastq.gz | samtools sort -n -O bam -o contigs_R1.bam
