@@ -110,7 +110,11 @@ There are again two peaks, well separated as this library was not amplified. The
 
 [Smudgeplot](https://github.com/KamilSJaron/smudgeplot)
 
-![smudgeplot](s1_pic/galaxy.smudgeplot_ont.png)
+```
+Ranallo-Benavidez, T. R., Jaron, K. S., & Schatz, M. C. (2020). GenomeScope 2.0 and Smudgeplot for reference-free profiling of polyploid genomes. Nature Communications, 11(1), 1432.
+```
+
+![smudgeplot](s1_pic/galaxy.smudgeplot.png)
 
 ```sh
 mkdir tmp_smudge
@@ -128,7 +132,12 @@ smudgeplot.py hetkmers -o kmcdb_L"$L"_U"$U" < kmcdb_L"$L"_U"$U".dump
 smudgeplot.py plot kmcdb_L"$L"_U"$U"_coverages.tsv
 ```
 
-![smudgeplot_result](s1_pic/smudgeplot_smudgeplot.png)
-![smudgeplot_result_log10](s1_pic/smudgeplot_smudgeplot_log10.png)
+![smudgeplot_result](s1_pic/galaxy.smudgeplot_ont.png)
+![smudgeplot_result_log10](s1_pic/galaxy.smudgeplot_log10_ont.png)
 
 The strong signal around 1/2 2N supports a prediction of a diploid genome.
+
+## Smudgeplot on PacBio HiFi reads
+
+![smudgeplot_result](s1_pic/galaxy.smudgeplot_hifi.png)
+![smudgeplot_result_log10](s1_pic/galaxy.smudgeplot_log10_hifi.png)
