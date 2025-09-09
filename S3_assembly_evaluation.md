@@ -15,22 +15,22 @@ gfastats assembly.fasta --nstar-report --locale en_US.UTF-8  --tabular
 ```
 
 ```
-# scaffolds 	166
-Total scaffold length 	43,567,352
-Average scaffold length 	262,453.93
-Scaffold N50 	941,457
-Scaffold auN 	3,479,015.56
-Scaffold L50 	7
-Largest scaffold 	8,189,580
-Smallest scaffold 	599
-# contigs 	211
-Total contig length 	43,567,352
-Average contig length 	206,480.34
-Contig N50 	753,921
-Contig auN 	3,234,472.34
-Contig L50 	8
-Largest contig 	8,082,680
-Smallest contig 	599
+# scaffolds 	30
+Total scaffold length 	35,951,546
+Average scaffold length 	1,198,384.87
+Scaffold N50 	2,231,814
+Scaffold auN 	2,740,535.61
+Scaffold L50 	5
+Largest scaffold 	5,107,803
+Smallest scaffold 	14,284
+# contigs 	30
+Total contig length 	35,951,546
+Average contig length 	1,198,384.87
+Contig N50 	2,231,814
+Contig auN 	2,740,535.61
+Contig L50 	5
+Largest contig 	5,107,803
+Smallest contig 	14,284
 # gaps in scaffolds 	0
 Total gap length in scaffolds 	0
 Average gap length in scaffolds 	0.00
@@ -39,65 +39,54 @@ Gap auN in scaffolds 	0.00
 Gap L50 in scaffolds 	0
 Largest gap in scaffolds 	0
 Smallest gap in scaffolds 	0
-Base composition (A:C:G:T) 	12,626,844:9,114,077:9,142,553:12,683,878
-GC content % 	41.90
+Base composition (A:C:G:T) 	10,461,756:7,517,000:7,508,597:10,464,193
+GC content % 	41.79
 # soft-masked bases 	0
-# segments 	166
-Total segment length 	35,279,172
-Average segment length 	212,525.13
+# segments 	30
+Total segment length 	35,951,546
+Average segment length 	1,198,384.87
 # gaps 	0
-# paths 	166
-# edges 	75
-Average degree 	0.45
-# connected components 	3
-Largest connected component length 	33,114,098
-# dead ends 	220
-# disconnected components 	109
-Total length disconnected components 	2,131,845
-# separated components 	112
-# bubbles 	1
-# circular segments 	3
-# circular paths 	3
-Scaffold N10 	8,189,580
-Scaffold N20 	8,067,949
-Scaffold N30 	8,067,949
-Scaffold N40 	1,661,934
-Scaffold N50 	941,457
-Scaffold N60 	835,646
-Scaffold N70 	685,218
-Scaffold N80 	506,658
-Scaffold N90 	231,096
-Scaffold N100 	599
+# paths 	30
+Scaffold N10 	5,107,803
+Scaffold N20 	5,002,107
+Scaffold N30 	3,237,547
+Scaffold N40 	3,146,633
+Scaffold N50 	2,231,814
+Scaffold N60 	1,900,052
+Scaffold N70 	1,468,560
+Scaffold N80 	1,276,147
+Scaffold N90 	839,386
+Scaffold N100 	14,284
 Scaffold L10 	1
 Scaffold L20 	2
-Scaffold L30 	2
-Scaffold L40 	3
-Scaffold L50 	7
-Scaffold L60 	12
-Scaffold L70 	17
-Scaffold L80 	25
-Scaffold L90 	37
-Scaffold L100 	166
-Contig N10 	8,082,680
-Contig N20 	7,938,813
-Contig N30 	7,938,813
-Contig N40 	1,469,920
-Contig N50 	753,921
-Contig N60 	506,658
-Contig N70 	295,207
-Contig N80 	207,459
-Contig N90 	106,900
-Contig N100 	599
+Scaffold L30 	3
+Scaffold L40 	4
+Scaffold L50 	5
+Scaffold L60 	7
+Scaffold L70 	9
+Scaffold L80 	12
+Scaffold L90 	15
+Scaffold L100 	30
+Contig N10 	5,107,803
+Contig N20 	5,002,107
+Contig N30 	3,237,547
+Contig N40 	3,146,633
+Contig N50 	2,231,814
+Contig N60 	1,900,052
+Contig N70 	1,468,560
+Contig N80 	1,276,147
+Contig N90 	839,386
+Contig N100 	14,284
 Contig L10 	1
 Contig L20 	2
-Contig L30 	2
-Contig L40 	3
-Contig L50 	8
-Contig L60 	16
-Contig L70 	28
-Contig L80 	46
-Contig L90 	72
-Contig L100 	211
+Contig L30 	3
+Contig L40 	4
+Contig L50 	5
+Contig L60 	7
+Contig L70 	9
+Contig L80 	12
+Contig L90 	15
+Contig L100 	30
 Gap N10 	0
 Gap N20 	0
 Gap N30 	0
@@ -120,7 +109,7 @@ Gap L90 	0
 Gap L100 	0 
 ```
 
-Here there are 166 scaffolds, with a total assembly size of 43,567,352 bases. This is larger than the expected genome size for the two haplotypes of chromosome E.
+Here there are 30 scaffolds, with a total assembly size of 35,951,546 bases, matching the expected size for the two haplotypes of chromosome E. The scaffold/contig N50 is 2,231,814 bases (2.2 Mb). The N50 is the same for the scaffolds and the contigs, as these are all contigs (they do not have any gaps). A gapless scaffold is basically a contig. 
 
 ## Ortholog completeness
 
@@ -175,6 +164,7 @@ Dependencies and versions:
 ```
 
 The Eukaryota lineage was selected automatically. Among 255 orthologs, 26 were found as complete in the assembly, 3 in single copy, and 23 duplicated. The high proportion of duplicated orthologs is expected, as we have a phased assembly where both copies of the chromosome, thus both alleles of the genes, are included in the assembly. Therefore the orthologs are expected in two copies. The BUSCO score here is low for two reasons: the lineage is rather large (Eukaryota) and we are only assembling one chromosome (in two copies), not the whole genome. 
+It should be noted that BUSCO also gives metrics on assembly size and N50, and these match the ones of gfastats.
 
 ## *k*-mer completeness
 
