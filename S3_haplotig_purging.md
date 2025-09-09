@@ -1,8 +1,12 @@
 # Haplotig purging
 
-For this part, we will use a draft assembly and reads for the nematode *Propanagrolaimus* sp. JU765 [PRJEB87118](https://www.ebi.ac.uk/ena/browser/view/PRJEB87118). These reads were generated from multiple indivduals, and the species is hermaphroditic.
+For this part, we will use a draft assembly and reads for the nematode *Propanagrolaimus* sp. JU765 [PRJEB87118](https://www.ebi.ac.uk/ena/browser/view/PRJEB87118). These reads were generated from multiple indivduals, and the species is hermaphroditic, thus we cannot phase this assembly and will aim for a collapsed assembly. The Nanopore R10.4 reads were sequenced on a MinION, with an LSK114 library, at the Universität zu Köln. The PacBio HiFi reads were sequenced from an ultra-low input library on a Sequel, at the [Genomics and Transcriptomics Lab](https://www.gtl.hhu.de/). 
+
+In the following tutorial, collapsed sequences designate regions that are represented with only one copy, and uncollapsed sequences designate regions that are in multiple copies (two haplotypes most often). 
 
 ## Mapping reads to the assembly
+
+To perform haplotig purging, the long-read dataset needs to be mapped against the assembly first to analyze the coverage of the contigs. Uncollapsed regions will usually have lower coverage than collapsed regions because the reads are mapped to each haplotype.
 
 ### PacBio HiFi reads
 
