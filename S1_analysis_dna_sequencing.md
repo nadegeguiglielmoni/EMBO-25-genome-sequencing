@@ -149,3 +149,28 @@ The strong signal around 1/2 2N supports a prediction of a diploid genome.
 
 ![smudgeplot_result](s1_pic/galaxy.smudgeplot_hifi.png)
 ![smudgeplot_result_log10](s1_pic/galaxy.smudgeplot_log10_hifi.png)
+
+## Filtering reads
+
+[Filtlong](https://github.com/rrwick/Filtlong)
+
+### Selection based on quality
+
+In this example, we are removing all reads below a mean quality of 20, to keep only the more accurate ones.
+
+![filtlong1](s1_pic/galaxy.filtlong1_ont.png)
+
+```
+filtlong --min_mean_q '20.0' --length_weight '1.0' --mean_q_weight '1.0' --window_q_weight '1.0'  --window_size '250' psambesii.chromE.ont.fastq.gz > filtered.fastq
+```
+
+### Selection based on length
+
+Here we remove all reads below a length of 30 kb.
+
+![filtlong2](s1_pic/galaxy.filtlong2_ont.png)
+
+```
+filtlong --min_length '30000' --length_weight '1.0' --mean_q_weight '1.0' --window_q_weight '1.0'  --window_size '250' psambesii.chromE.ont.fastq.gz > filtered.fastq
+```
+
