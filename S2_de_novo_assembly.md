@@ -11,6 +11,9 @@ Goals:
 * generate draft phased assemblies using PacBio HiFi and Nanopore reads, separately and combined
 * investigate the assembly graph
 
+Content:
+* [hifiasm (PacBio HiFi only)](#hifiasm-(PacBio-HiFi-only))
+
 ## hifiasm (PacBio HiFi only)
 
 To learn more [about hifiasm](https://www.youtube.com/watch?v=RtTRC3AaaPk&t=1927s).
@@ -82,10 +85,24 @@ hifiasm -o output -f 37 -l 0 --ul psambesii.chromE.ont.fastq.gz --ul-rate 0.2 --
 
 ## Converting graphical fragment assembly (GFA) to fasta file
 
+hifiasm only outputs assemblies in GFA formats, but many tools need a fasta as input. GFAs can easily be converted into FASTA files with the module "Convert GFA to FASTA" in Galaxy or an awk command line in the terminal.
+
 ![gfatofasta](s2_pic/gfatofasta_hifiasm.png)
 
 ```sh
 awk '/^S/{print ">"$2;print $3}' assembly.gfa > assembly.fasta
+```
+
+## Verkko (PacBio HiFi + Nanopore)
+
+Verkko is annother assembler that can combine PacBio HiFi and Nanopore reads. It can also be used with PacBio HiFi reads only.
+
+[Verkko](https://github.com/marbl/verkko)
+
+![verkko_hifi_ont](s2_pic/galaxy.verkko_hifi_ont.png) 
+
+```sh
+verkko --hifi psambesii.chromE.hifi.fastq.gz --nano psambesii.chromE.ont.fastq.gz -d asm 
 ```
 
 ## Checking the Graphical Fragment Assembly (GFA)
