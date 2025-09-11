@@ -12,9 +12,15 @@ Goals:
 * investigate the assembly graph
 
 Content:
-* [hifiasm PacBio HiFi only](#hifiasm-PacBio-HiFi-only)
+* [hifiasm PacBio HiFi](#hifiasm-PacBio-HiFi)
+* [Flye PacBio HiFi](#Flye-PacBio-HiFi)
+* [hifiasm Nanopore](#hifiasm-Nanopore)
+* [Flye Nanopore](#Flye-Nanopore)
+* [hifiasm PacBio HiFi and Nanopore](#hifiasm-PacBio-HiFi-and-Nanopore)
+* [Verkko PacBio HiFi and Nanopore](#Verkko-PacBio-HiFi-and-Nanopore)
+* [Checking the Graphical Fragment Assembly](#Checking-the-Graphical-Fragment-Assembly)
 
-## hifiasm PacBio HiFi only
+## hifiasm PacBio HiFi
 
 To learn more [about hifiasm](https://www.youtube.com/watch?v=RtTRC3AaaPk&t=1927s).
 
@@ -32,7 +38,7 @@ hifiasm -o assembly -f 37 -l 0 -s 0.75 -O 1 --primary psambesii.chromE.hifi.fast
 
 The parameter `-l 0` is used (by default in Galaxy) to set the purging level to 0, as we do not want to purge any haplotigs at all to obtain a phased draft assembly. In the case that you do not want to phase your assembly but rather have a collapsed assembly (dataset from multiple individuals), the purging level can be set up to `-l 3` (for aggressive purging). It should be noted that this purging may not be sufficient to remove all haplotigs (especially when working with high-heterozygosity genomes) and that more haplotig purging may be necessary (see Section 3). 
 
-## Flye (HiFi)
+## Flye PacBio HiFi
 
 [Flye](https://github.com/fenderglass/Flye)
 
@@ -48,7 +54,7 @@ flye --pacbio-hifi psambesii.chromE.hifi.fastq.gz -o out_dir -i 1
 
 In this example, Flye is run with default parameters. For genomes over 2\% heterozygosity, Flye will generally retain all haplotypes and yield a phased assembly, without even adding the parameter `--keep-haplotypes`. For lower heterozygosity genomes, haplotypes tend to be collapsed and then I guess that the parameter `--keep-haplotypes` would be necessary for a phased assembly. 
   
-## hifiasm (Nanopore)
+## hifiasm Nanopore
 
 [hifiasm](https://github.com/chhylp123/hifiasm)
 
@@ -60,7 +66,7 @@ From hifiasm v0.20, the parameter `--ont` was introduced to assemble Nanopore R1
  hifiasm --ont -o output -f 37 -l 0 --primary psambesii.chromE.ont.fastq.gz
 ```
 
-## Flye (Nanopore)
+## Flye Nanopore
 
 [Flye](https://github.com/fenderglass/Flye)
 
@@ -70,7 +76,7 @@ From hifiasm v0.20, the parameter `--ont` was introduced to assemble Nanopore R1
 flye --nano-corr psambesii.chromE.hifi.fastq.gz -o out_dir -i 1
 ```
 
-## hifiasm (PacBio HiFi + Nanopore)
+## hifiasm PacBio HiFi and Nanopore
 
 It is possible to combine PacBio HiFi reads and Nanopore reads with hifiasm. The PacBio HiFi reads are used to build the graph and Nanopore reads to resolve difficult paths. The Nanopore reads are passed with the parameter `--ul` in this case. The manual suggests ultra-long reads over 100 kb, but Nanopore datasets much shorter than that are still useful. We can't all have 100+ kb Nanopore datasets. 
 
@@ -83,8 +89,6 @@ It is possible to combine PacBio HiFi reads and Nanopore reads with hifiasm. The
 hifiasm -o output -f 37 -l 0 --ul psambesii.chromE.ont.fastq.gz --ul-rate 0.2 --ul-tip 6  --primary psambesii.chromE.hifi.fastq.gz
 ```
 
-## Converting graphical fragment assembly (GFA) to fasta file
-
 hifiasm only outputs assemblies in GFA formats, but many tools need a fasta as input. GFAs can easily be converted into FASTA files with the module "Convert GFA to FASTA" in Galaxy or an awk command line in the terminal.
 
 ![gfatofasta](s2_pic/gfatofasta_hifiasm.png)
@@ -93,7 +97,7 @@ hifiasm only outputs assemblies in GFA formats, but many tools need a fasta as i
 awk '/^S/{print ">"$2;print $3}' assembly.gfa > assembly.fasta
 ```
 
-## Verkko (PacBio HiFi + Nanopore)
+## Verkko PacBio HiFi and Nanopore
 
 Verkko is annother assembler that can combine PacBio HiFi and Nanopore reads. It can also be used with PacBio HiFi reads only.
 
@@ -105,9 +109,9 @@ Verkko is annother assembler that can combine PacBio HiFi and Nanopore reads. It
 verkko --hifi psambesii.chromE.hifi.fastq.gz --nano psambesii.chromE.ont.fastq.gz -d asm 
 ```
 
-## Checking the Graphical Fragment Assembly (GFA)
+## Checking the Graphical Fragment Assembly 
 
-hifiasm and Flye produce Graphical Fragment Assemblies (GFA), which include the nucleotide sequences and potential links connecting them. This assembly graph can be visualized to examine unresolved paths (where the assembler had multiple paths to connect sequences and could not choose a single one). We will use the tool Bandage to look at the assembly graphs.
+hifiasm, Flye and Verkko produce Graphical Fragment Assemblies (GFA), which include the nucleotide sequences and potential links connecting them. This assembly graph can be visualized to examine unresolved paths (where the assembler had multiple paths to connect sequences and could not choose a single one). We will use the tool Bandage to look at the assembly graphs.
 
 NB: Flye has two files called "assembly graph" and "graphical fragment assembly". The first one is a different format. We want the "graphical fragment assembly".
 
