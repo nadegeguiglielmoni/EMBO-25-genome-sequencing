@@ -12,9 +12,9 @@ Goals:
 * investigate the assembly graph
 
 Content:
-* [hifiasm (PacBio HiFi only)](#hifiasm-(PacBio-HiFi-only))
+* [hifiasm PacBio HiFi only](#hifiasm-PacBio-HiFi-only)
 
-## hifiasm (PacBio HiFi only)
+## hifiasm PacBio HiFi only
 
 To learn more [about hifiasm](https://www.youtube.com/watch?v=RtTRC3AaaPk&t=1927s).
 
