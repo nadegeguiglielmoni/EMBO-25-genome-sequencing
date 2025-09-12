@@ -1,5 +1,7 @@
 # Assembly evaluation
 
+Assemblies should be evaluated at every step of the process, by looking notably at the assembly size, the contiguity (N50, N90), the ortholog completeness and the *k*-mer completeness.
+
 ## Assembly statistics
 
 [gfastats](https://github.com/vgl-hub/gfastats)
